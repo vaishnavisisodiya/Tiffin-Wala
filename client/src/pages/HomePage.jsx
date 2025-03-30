@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-//import { CircularProgress } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 import ChooseUs from "../components/Home/ChooseUs";
 import HeroSlider from "../components/Home/HeroSlider";
 import Info from "../components/Home/Info";
@@ -17,13 +17,16 @@ function HomePage() {
   }, []);
   if (!active) {
     return (
-      // <div
-      // //   className="w-full flex items-center justify-center"
-      // //   style={{ height: "85vh" }}
-      // // >
-      // //   <CircularProgress />
-      // </div>
-      <div>komal</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100vh",
+          alignItems: "center",
+        }}
+      >
+        <CircularProgress color="primary" size={50} thickness={4} />
+      </div>
     );
   }
   return (
